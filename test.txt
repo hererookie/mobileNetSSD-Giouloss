@@ -1,0 +1,4 @@
+python3 run_ssd_live_demo.py mb1-ssd models/mb1-ssd-Epoch-299-Loss-14.952684689199863.pth models/voc-model-labels.txt
+python3 run_ssd_live_demo.py mb1-ssd models/mb1-ssd-Epoch-20-Loss-9.73607722379101.pth models/voc-model-labels.txt
+
+python3 train_ssd.py --datasets /home/liuqw/mymobilenetSSD/data/VOC20071/ --validation_dataset /home/liuqw/mymobilenetSSD/data/VOC20071/ --net mb1-ssd --base_net models/mobilenet_v1_with_relu_69_5.pth  --batch_size 32 --num_epochs 300 --scheduler cosine --lr 0.01 --t_max 200 --use_cuda '0'
